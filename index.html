@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title> CHOO CHOO</title>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/train.css">
+      
+   <!--Firebase link-->
+   
+<script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    </head>
+    <body>
+        <!-- //comments made on April 24 of 2019
+        //first we need a fluid jumbotron to display the title in a way that is both appealing and reasonable with a break for spacing -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Le Grand Train Scheduler</h1>
+              <p class="lead">If you miss the train, it's not our problem!</p>
+            </div>
+          </div>
+          <br>        
+    <!--//then we need rows and columns to display the trains arrival times neatly and effectively   -->
+          <div class="row"></div>
+    <!--//columns to keep the data neat-->
+    <div class="col-lg-8 col-md-8 col-sm-8">
+        <!--This table will display the train schedule-->
+
+        <!--More train data split with panels that were researched on w3schools.com-->
+        <div class="panel panel-default">
+        <h2>Arrival Times</h2>
+    </div>
+    <div>
+<!--Tables to display information on the trains-->
+<table class="Megatable" id="thomasthetraintable">
+    <!--the thead tag will allow us to give a group header and must be accompanied by <tbody>& <tfoot>-->
+<thead><!--these will be the titles of the columns-->
+<tr>
+<th>Names of le trains</th> <!--this is a table header-->
+<th>Le Destination</th> <!--Doesn't take an Einstein to know what this means-->
+<th>Regularity (in minutes)</th><!--tells us how frquently the train arrives, Measured in minutes-->
+<th>The Next Arrival</th> <!--again, doesnt take an einstein-->
+<th>Waiting time</th>
+</tr>
+</thead>
+<tbody>  <!--and this Ladies and gentlemen is where the information shall appear--></tbody>
+</table>
+</div>
+<br> <!--another break to keep things looking neat-->
+
+<div class="form-group">
+    <input type="text" class="form-control" id="lename" placeholder="Names of le trains"> <!--these will be called out in JS to add the names of trains-->
+<input type="text" class="form-control" id="destination" placeholder="Le Destination"> <!--this will let us use JS to tell people the destination of the trains-->
+<input type="text" class="form-control" id="time" placeholder="Time of le train (24:00)"> <!--this lets the system know the time of the first train-->
+<input type="text" class="form-control" id="reggie" placeholder="Reularity (in minutes)"> <!--I think by now you get the point.-->
+<!--So with these user input possibilties we need soe kind of button that will... well submit info DURR-->
+<button class="btn btn-primary btn-lg" id="CHOOCHOOBTN" type="submit">All Aboard!</button>
+
+</div>
+
+
+
+
+    </div>  
+    <script src="assets/train.js"></script>
+        </body>
+</html>
